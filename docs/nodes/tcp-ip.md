@@ -89,7 +89,7 @@ key_gap: can_explain — most understand the mechanics of the three-way handshak
 
 ## Relations
 
-- [TCP/IP ↔ QUIC](../relations/tcp-ip__quic.md) _(relation file not yet written)_
+- [TCP/IP ↔ QUIC](../relations/tcp-ip__quic.md)
 
 ## Sources
 

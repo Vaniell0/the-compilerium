@@ -75,7 +75,7 @@ key_gap: can_apply → can_explain — most Rust practitioners learn the borrow-
 
 **RUST-C004** 🟡 — the borrow checker encodes what experienced systems programmers do mentally; the innovation is automating the proof, not inventing the discipline
 
-**RUST-C005** 🟠 — "Rust is memory-safe" is true only for safe Rust; unsafe blocks are not checked; the ecosystem's C-FFI wrappers accumulate unsafe code whose correctness depends on human audit, not the compiler — the surface area of unsafe in popular crates is not well-measured
+**RUST-C005** 🟠 — "Rust is memory-safe" is true only for safe Rust; every FFI wrapper around a C library exposes an unsafe block whose correctness is inherited from the underlying C code and human audit, not from the borrow checker — the safety guarantee ends exactly at the `unsafe {}` boundary
 
 **RUST-C006** 🟠 — async Rust has the coloured-function problem: async and sync code cannot call each other freely; Pin, lifetime bounds across .await points, and Send/Sync constraints concentrate pain in exactly the low-abstraction systems code that reaches for Rust first
 

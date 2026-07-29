@@ -61,10 +61,11 @@ reach:
   can_teach:      very low
 
 key_gap: can_explain — most practitioners know "WASM is faster than JS"
-         as a slogan; few can say that WASM has predictable performance
-         without warmup while JS with warmup often matches or beats it,
-         that WASM cannot touch the DOM at all, or that the standard's
-         current roadmap is driven by edge compute rather than browser use cases
+         as a slogan; few can say that WASM's structural win is predictable
+         cold-start performance and no JIT warmup phase (a warmed JIT can
+         approach WASM throughput on monomorphic hot code), that WASM cannot
+         touch the DOM at all, or that the standard's current roadmap is
+         driven by edge compute rather than browser use cases
 ```
 
 ## Demonstrator
@@ -83,7 +84,7 @@ Fastly Compute@Edge running production WASM: a sandboxed module with a capabilit
 
 **WASM-C005** 🟠 — "WASM replaces JavaScript" is wrong by design: WASM has no DOM access, no Web API bindings, no async I/O — a WASM module must call JS functions to reach the browser environment; JS remains the mandatory integration layer between WASM and the DOM (see [JavaScript ↔ WebAssembly](../relations/javascript__webassembly.md))
 
-**WASM-C006** 🟠 — "WASM is faster than JS" is the wrong frame: WASM has predictable performance without JIT warmup; JS with a warm JIT often matches or beats WASM for polymorphic-heavy code; the practical advantage of WASM is cold-start predictability and elimination of deoptimisation cliffs, not raw throughput
+**WASM-C006** 🟠 — "WASM is faster than JS" is the wrong frame: WASM's structural win is predictable cold-start performance and no JIT warmup phase — a warmed JIT like [V8](v8.md) can approach WASM's throughput on monomorphic hot code paths (that is what V8-C005 describes); WASM eliminates the deoptimisation cliff and gives consistent performance across engines, which is what actually matters for edge compute and cold-start-heavy workloads
 
 **WASM-C007** 🟠 — "WASM is sandboxed by design" conflates two separate things: the ISA prevents arbitrary memory access and gadget exploitation (structural guarantee); what a WASM module can actually do is determined entirely by which WASI import functions the host grants — misconfigured capabilities are the real attack surface, not the ISA
 
