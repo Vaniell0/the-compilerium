@@ -92,7 +92,9 @@ The `_GLIBCXX_USE_CXX11_ABI` linker flag, required in production builds on Linux
 
 - Stroustrup, B. (1994). *The Design and Evolution of C++*. Addison-Wesley.
 - https://www.stroustrup.com/hopl2.pdf
-- Veldhuizen, T. (1995). «Using C++ Template Metaprograms». C++ Report.
+- Unruh, E. (1994). «Prim-Zahlen (Prime Numbers)». Original C++ template metaprogram: erwin-unruh.de/primorig.html
+- Veldhuizen, T. (1995). «Using C++ Template Metaprograms». C++ Report, 7(4): 36–43. Reprinted in *C++ Gems* (Lippman, ed., 1996). Author's page: cs.indiana.edu/~tveldhui/papers/Template-Metaprograms/meta-art.html
+- Vandevoorde, D., Josuttis, N. M., Gregor, D. (2017). *C++ Templates: The Complete Guide*, 2nd ed. Addison-Wesley — chapter 23 on metaprogramming history and mechanism.
 - https://isocpp.org/
 - GCC docs, «Dual ABI». gcc.gnu.org/onlinedocs/libstdc++/manual/using_dual_abi.html
 - Sutter, H. cppfront project. github.com/hsutter/cppfront

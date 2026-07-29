@@ -78,7 +78,7 @@ key_gap: can_explain — most Windows practitioners know the UI; few know that t
 
 **WINDOWS-C004** 🟢 — Dave Cutler designed NT under the direct influence of DEC VMS: the object model, IRQL hierarchy, HAL design, and executive-subsystem separation are VMS lineage; the NT kernel shares no ancestry with MS-DOS, which ended as a consumer platform with Windows Me (2000)
 
-**WINDOWS-C005** 🟠 — the mass-audience belief that "Windows is slow because it's bloated" conflates NT kernel overhead with the userspace stack (telemetry agents, Defender real-time scanning, Windows Update service, superfetch); the NT kernel is a well-engineered hybrid; the perceived slowness lives in the layer above it ⚠
+**WINDOWS-C005** 🟠 — the mass-audience belief that "Windows is slow because it's bloated" conflates NT kernel overhead with the userspace stack (Defender real-time scanning, telemetry agents, Windows Update service, superfetch); the measurement to run is Windows Server Core (userspace stripped, same NT kernel) versus Windows 11 desktop — the observable delta lives in the userspace layer, not in the kernel itself
 
 **WINDOWS-C006** 🟠 — the Registry is a hierarchical key-value database with transactional writes and per-key ACLs — not a flat INI replacement; the pain users associate with it is the tooling (regedit, opaque key paths) and the absence of a per-application namespace, not the data model itself
 

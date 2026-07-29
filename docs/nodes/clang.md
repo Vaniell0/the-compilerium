@@ -99,7 +99,8 @@ clangd in a [C++](c-plus-plus.md) project with a `compile_commands.json`: open a
 - FSF, GPL v3 rationale: gnu.org/licenses/gpl-3.0-rationale.html
 - FSF, «Why Upgrade to GPL Version 3»: gnu.org/licenses/rms-why-gplv3.html
 - Lattner, C. (2008). «What is Clang?» clang.llvm.org/features.html
-- Serebryany, K. et al. (2012). «AddressSanitizer: A Fast Address Sanity Checker». USENIX ATC 2012.
+- Serebryany, K. et al. (2012). «AddressSanitizer: A Fast Address Sanity Checker». USENIX ATC 2012 — Google-authored, upstreamed to Clang.
+- GCC 4.8 release notes (2013): gcc.gnu.org/gcc-4.8/changes.html — first GCC release with -fsanitize=address support ported from Clang/LLVM.
 - Apple Developer release notes, Xcode 4.1 (2011): GCC removed as default
 - Android NDK changelog, r14 (2016): Clang becomes default
 - clangd.llvm.org — architecture overview

@@ -87,7 +87,7 @@ key_gap: can_apply → can_explain
 
 **MACOS-C010** 🟡 — kext deprecation (Big Sur, 2020) moves third-party kernel code from kernel space (kexts) to supervised userspace processes (System Extensions, DriverKit); the security argument is that a misbehaving or compromised System Extension cannot directly corrupt kernel memory, unlike a kext crash that takes the whole kernel down
 
-**MACOS-C011** 🟠 — TCC bypass vulnerabilities (e.g. CVE-2020-9934, CVE-2021-30713) follow the same structural pattern as the UAC auto-elevation bypass documented in [Linux ↔ Windows](../relations/linux__windows.md) as LINUX-WINDOWS-C012: a usability relaxation — here, inherited environment variables or inter-process injection into an already-TCC-approved process — becomes a security hole; the pattern is not macOS-specific, it is a consequence of building usability on top of a security model without enforcing its invariant at every injection point
+**MACOS-C011** 🟠 — TCC bypass advisories recur across macOS releases (Objective-See publishes a running list); the shared structural pattern is that bypasses do not defeat the kernel enforcement — they leverage an already-TCC-approved parent process whose permission is inherited or laterally exploited; this is the same shape as the UAC auto-elevation bypass documented in [Linux ↔ Windows](../relations/linux__windows.md) as LINUX-WINDOWS-C012 — a usability relaxation on top of a strict enforcement model becomes the attack surface, not the enforcement itself
 
 **MACOS-C012** 🟠 — the mass-audience belief that macOS is "inherently more secure" than other desktop OSes conflates two separate facts: Apple ships a strong default configuration (SIP, TCC, notarisation, Gatekeeper all on by default), and therefore average users encounter fewer attacks — not because the architecture is uniquely impenetrable, but because most malware targets the larger Windows user base and macOS defaults are harder to misconfigure; when targeted, macOS vulnerabilities follow the same classes as any other Unix-derived system
 
@@ -103,7 +103,7 @@ key_gap: can_apply → can_explain
 - Apple Silicon transition technical overview, WWDC 2020
 - EU DMA, Apple compliance reports 2024–2025
 - Apple Platform Security guide (2024): developer.apple.com/documentation/security — covers SIP, TCC, notarisation, Gatekeeper, and Secure Enclave
-- Apple Developer Documentation: «System Integrity Protection» (technote 2501)
+- Apple Developer Documentation: «System Integrity Protection» — developer.apple.com/documentation/security/system-integrity-protection
 - Apple Developer Documentation: «Protecting user data with TCC» — Transparency, Consent, and Control
 - Apple Developer Documentation: «Notarizing macOS software before distribution»
 - Apple Developer Documentation: «System Extensions and DriverKit» (WWDC 2019)
