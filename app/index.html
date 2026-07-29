@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="The Compilerium — an open knowledge graph about programming, mapped through verifiable claims." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f2e8'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='20' font-weight='500' text-anchor='middle' fill='%237c4a1e'%3EC%3C/text%3E%3C/svg%3E" />
+  <title>The Compilerium</title>
+</head>
+<body>
+  <header id="tc-header">
+    <a class="tc-logo" href="#/" aria-label="The Compilerium — home">
+      <span class="tc-logo-text">The Compilerium</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#/graph" data-route="/graph">Graph</a>
+      <a href="#/index" data-route="/index">Index</a>
+      <button type="button" class="tc-palette-hint" id="tc-palette-hint" aria-label="Open jump palette">
+        <span class="tc-palette-hint-label">Jump</span>
+        <kbd>⌘K</kbd>
+      </button>
+      <a href="#/settings" data-route="/settings" class="tc-settings-link" aria-label="Settings">⚙</a>
+    </nav>
+  </header>
+  <main id="tc-view"></main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

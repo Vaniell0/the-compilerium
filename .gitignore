@@ -1,0 +1,38 @@
+*
+!*/
+
+!.gitignore
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+!package.json
+!package-lock.json
+!vite.config.js
+
+!docs/**/*.md
+!docs/**/*.yaml
+
+!people/**/*.md
+!research/**/*.md
+!contributors/**/*.md
+
+!assets/diagrams/*.svg
+!assets/diagrams/*.png
+
+# Vite SPA
+!app/index.html
+!app/src/**
+!app/src/views/**
+!app/vite-plugin-graph.js
+!app/public/
+app/public/graph.json
+
+# Lab notes (if added)
+!lab-notes/**/*.md
+
+# CI
+!.github/workflows/deploy.yml
+
+# Build output
+node_modules/
+dist/
