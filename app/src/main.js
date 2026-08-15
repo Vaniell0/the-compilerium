@@ -8,6 +8,7 @@ import { render as renderGraph }    from './views/graph-view.js'
 import { render as renderSettings } from './views/settings-view.js'
 import { makeRenderer } from './views/entity-view.js'
 import { makeIndex, renderIndexHub } from './views/index-view.js'
+import { renderDomain } from './views/domain-view.js'
 
 const renderNodes        = makeIndex('node')
 const renderRelations    = makeIndex('relation')
@@ -56,6 +57,11 @@ router.on('/contributors', (view) => {
 router.on('/research', (view) => {
   destroyGraph()
   renderResearch(view)
+})
+
+router.on('/domain/:slug', (view, params) => {
+  destroyGraph()
+  renderDomain(view, params)
 })
 
 router.on('/node/:slug', (view, params, fragment) => {

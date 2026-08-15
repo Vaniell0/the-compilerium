@@ -31,6 +31,44 @@ export const CONFIDENCE = {
 
 export const DOMAIN_ORDER = ['systems', 'compilers', 'languages', 'runtimes', 'ml', 'web', 'networking', 'people']
 
+export const DOMAIN_META = {
+  systems: {
+    title: 'Systems',
+    capsule: 'Operating systems, low-level languages, and the substrate that everything else runs on.',
+    readingOrder: ['linux', 'c', 'c-plus-plus', 'rust'],
+  },
+  compilers: {
+    title: 'Compilers',
+    capsule: 'Programs that translate source text into executable form — and the shared IR infrastructure they share.',
+    readingOrder: ['gcc', 'clang', 'llvm', 'mlir'],
+  },
+  languages: {
+    title: 'Languages',
+    capsule: 'Programming languages as designed artefacts: syntax, semantics, and the communities that adopted them.',
+    readingOrder: ['python', 'javascript'],
+  },
+  runtimes: {
+    title: 'Runtimes',
+    capsule: 'Execution environments that sit between source and hardware — VMs, interpreters, compatibility layers.',
+    readingOrder: ['v8', 'wine', 'wsl'],
+  },
+  ml: {
+    title: 'Machine Learning',
+    capsule: 'Architectures, training recipes, and open questions about systems that learn from data.',
+    readingOrder: ['transformer', 'rwkv', 'distillation', 'pytorch', 'world-models', 'jepa'],
+  },
+  web: {
+    title: 'Web',
+    capsule: 'Protocols, runtimes, and formats that power the browser and server ecosystem.',
+    readingOrder: ['javascript', 'v8', 'webassembly'],
+  },
+  networking: {
+    title: 'Networking',
+    capsule: 'Transport protocols and the reliability guarantees they provide.',
+    readingOrder: ['tcp-ip', 'quic'],
+  },
+}
+
 export function domainColor(key) {
   return DOMAIN_COLORS[key] || DOMAIN_COLORS.default
 }

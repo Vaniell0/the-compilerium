@@ -1,5 +1,5 @@
 import { loadGraph } from '../data.js'
-import { DOMAIN_ORDER, domainColor } from '../constants.js'
+import { DOMAIN_ORDER, DOMAIN_META, domainColor } from '../constants.js'
 import { escAttr, escHtml, urlSlug, titleCase } from '../utils.js'
 
 const KIND_ROUTE = {
@@ -134,12 +134,38 @@ export async function renderIndexHub(container) {
         <p class="nc-hint">${escHtml(KIND_SUB[kind])}</p>
       </a>`
     }).join('')
+    const domainCards = DOMAIN_ORDER
+      .filter(d => DOMAIN_META[d])
+      .map(d => {
+        const meta  = DOMAIN_META[d]
+        const color = domainColor(d)
+        const nodeCount = (g.raw.nodes || []).filter(n =>
+          (n.fm?.subdomain === d) || (n.fm?.domain === d && !n.fm?.subdomain)
+        ).length
+        return `<a class="node-card" href="#/domain/${encodeURIComponent(d)}" style="--domain-color:${escAttr(color)}">
+          <div class="nc-header">
+            <span class="nc-name">${escHtml(meta.title)}</span>
+            <span class="nc-badges"><span class="nc-claims">${nodeCount}</span></span>
+          </div>
+          <p class="nc-hint">${escHtml(meta.capsule)}</p>
+        </a>`
+      }).join('')
+
     container.innerHTML = `<div class="tc-index-page">
       <header class="tc-index-header">
         <h1 class="tc-index-title">Index</h1>
         <p class="tc-index-sub">Every kind of entity in the graph, one listing per kind.</p>
       </header>
       <section class="tc-domain-block">
+        <h2 class="tc-domain-heading" style="--domain-color:#6b5f52">
+          <span class="tc-domain-name">Domains</span>
+        </h2>
+        <div class="nodes-grid">${domainCards}</div>
+      </section>
+      <section class="tc-domain-block">
+        <h2 class="tc-domain-heading" style="--domain-color:#6b5f52">
+          <span class="tc-domain-name">All entities</span>
+        </h2>
         <div class="nodes-grid">${cards}</div>
       </section>
     </div>`

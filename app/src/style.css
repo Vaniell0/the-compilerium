@@ -246,6 +246,15 @@ body {
   font-family: var(--tc-mono); color: var(--tc-ink-4);
   font-weight: 400;
 }
+.tc-reading-order {
+  list-style: decimal inside;
+  padding: 0; margin: 0 0 1rem;
+  display: flex; flex-direction: column; gap: 0.3rem;
+  font-family: var(--tc-serif); font-size: 0.95rem;
+}
+.tc-reading-order li { color: var(--tc-ink-2); }
+.tc-reading-order a { color: var(--tc-accent); }
+
 .nodes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

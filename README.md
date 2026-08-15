@@ -59,12 +59,9 @@ Overall confidence on a claim: **strong / moderate / weak**. Never percentages.
 
 ## Current state
 
-- **22** subjects
-- **18** relations
-- **14** people
-- **13** research documents
+Subjects, relations, people, and research — see the live graph at the site index. The numbers are tracked there automatically.
 
-Branches so far: systems (C, C++, Rust, Clang, LLVM, GCC, MLIR), platforms (Linux, macOS, Windows, Wine, WSL), web (JS, V8, WASM), ML (PyTorch, Transformer, Distillation, JEPA), networking (TCP/IP, QUIC), languages (Python).
+Domains so far: systems (C, C++, Rust, Clang, LLVM, GCC, MLIR), platforms (Linux, macOS, Windows, Wine, WSL), web (JS, V8, WASM), ML (PyTorch, Transformer, Distillation, JEPA), networking (TCP/IP, QUIC), languages (Python).
 
 ---
 
